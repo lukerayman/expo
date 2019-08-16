@@ -1520,6 +1520,7 @@ DEPENDENCIES:
   - EXPermissions (from `../packages/expo-permissions/ios`)
   - EXPrint (from `../packages/expo-print/ios`)
   - EXRandom (from `../packages/expo-random/ios`)
+  - EXScreenOrientation (from `../packages/expo-screen-orientation/ios`)
   - EXSecureStore (from `../packages/expo-secure-store/ios`)
   - EXSegment (from `../packages/expo-analytics-segment/ios`)
   - EXSensors (from `../packages/expo-sensors/ios`)
@@ -1612,15 +1613,27 @@ DEPENDENCIES:
   - yogaABI35_0_0 (from `./versioned-react-native/ABI35_0_0/ReactCommon/ABI35_0_0yoga`)
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Branch
+    - CocoaLumberjack
+    - Crashlytics
+    - Fabric
+    - FirebaseMLCommon
+    - FirebaseMLVision
+    - FirebaseMLVisionFaceModel
+    - Google-Maps-iOS-Utils
+    - GoogleMobileVision
+    - GoogleToolboxForMac
+    - GTMSessionFetcher
+    - JKBigInteger2
+    - nanopb
+    - Protobuf
   trunk:
     - Amplitude-iOS
     - Analytics
     - AppAuth
     - boost-for-react-native
     - Branch
-    - CocoaLumberjack
-    - Crashlytics
-    - Fabric
     - FBAudienceNetwork
     - FBSDKCoreKit
     - FBSDKLoginKit
@@ -1630,9 +1643,6 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseCoreDiagnosticsInterop
     - FirebaseInstanceID
-    - FirebaseMLCommon
-    - FirebaseMLVision
-    - FirebaseMLVisionFaceModel
     - Google-Maps-iOS-Utils
     - Google-Mobile-Ads-SDK
     - GoogleAPIClientForREST
@@ -1642,14 +1652,11 @@ SPEC REPOS:
     - GoogleMaps
     - GoogleMobileVision
     - GoogleSignIn
-    - GoogleToolboxForMac
     - GoogleUtilities
     - GTMAppAuth
     - GTMSessionFetcher
-    - JKBigInteger2
     - lottie-ios
     - nanopb
-    - Protobuf
 
 EXTERNAL SOURCES:
   ABI33_0_0EXAdsAdMob:
@@ -2145,6 +2152,9 @@ EXTERNAL SOURCES:
   EXRandom:
     :path: !ruby/object:Pathname
     path: "../packages/expo-random/ios"
+  EXScreenOrientation:
+    :path: !ruby/object:Pathname
+    path: "../packages/expo-screen-orientation/ios"
   EXSecureStore:
     :path: !ruby/object:Pathname
     path: "../packages/expo-secure-store/ios"
