@@ -4,11 +4,13 @@ Common views that are used for Expo apps that run on Android, iOS, and web. This
 
 This exports five components:
 
-- View
-- ScrollView
-- Text
-- TextInput
-- Image
+- `View`
+- `ScrollView`
+- `Text`
+- `TextInput`
+- `Image`
+
+and `StyleSheet`.
 
 # API documentation
 
