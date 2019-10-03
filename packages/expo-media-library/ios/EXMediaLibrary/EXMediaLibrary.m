@@ -736,8 +736,10 @@ UM_EXPORT_METHOD_AS(getAssetsAsync,
 {
   NSMutableArray<NSDictionary *> *albums = [NSMutableArray new];
   
-  for (PHAssetCollection *collection in collections) {
-    [albums addObject:[EXMediaLibrary _exportCollection:collection]];
+  for (PHCollection *collection in collections) {
+    if ([collection isKindOfClass:[PHAssetCollection class]]) {
+      [albums addObject:[EXMediaLibrary _exportCollection:(PHAssetCollection *)collection]];
+    }
   }
   return [albums copy];
 }
