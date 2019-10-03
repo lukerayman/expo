@@ -6,8 +6,9 @@ import { Localization } from './Localization.types';
 // https://github.com/expo/expo/blob/21ae94bae2e8369992050c433a00699d425b35bd/packages/expo/src/Localization.ts#L112-L114
 const parseLocale = (locale: string): string => locale.replace('_', '-');
 
-export const locale = parseLocale(ExpoLocalization.locale);
-export const locales = ExpoLocalization.locales.map(parseLocale);
+// Checking if ExpoLocalization.locale exists prevents iOS 13 simulator crashes where it may be undefined.
+export const locale = ExpoLocalization.locale ? parseLocale(ExpoLocalization.locale) : 'en-US';
+export const locales = ExpoLocalization.locales ? ExpoLocalization.locales.map(parseLocale) : ['en-US'];
 export const timezone = ExpoLocalization.timezone;
 export const isoCurrencyCodes = ExpoLocalization.isoCurrencyCodes;
 export const region = ExpoLocalization.region; // iOS, Web
