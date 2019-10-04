@@ -8,7 +8,9 @@ const parseLocale = (locale: string): string => locale.replace('_', '-');
 
 // Checking if ExpoLocalization.locale exists prevents iOS 13 simulator crashes where it may be undefined.
 export const locale = ExpoLocalization.locale ? parseLocale(ExpoLocalization.locale) : 'en-US';
-export const locales = ExpoLocalization.locales ? ExpoLocalization.locales.map(parseLocale) : ['en-US'];
+export const locales = ExpoLocalization.locales
+  ? ExpoLocalization.locales.map(parseLocale)
+  : ['en-US'];
 export const timezone = ExpoLocalization.timezone;
 export const isoCurrencyCodes = ExpoLocalization.isoCurrencyCodes;
 export const region = ExpoLocalization.region; // iOS, Web
